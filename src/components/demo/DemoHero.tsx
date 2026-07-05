@@ -19,12 +19,12 @@ export interface BusinessOption {
 }
 
 const businesses: BusinessOption[] = [
-  { id: "real-estate", label: "عقار", icon: Building2 },
-  { id: "restaurant", label: "مطعم", icon: ChefHat },
-  { id: "clinic", label: "عيادة", icon: HeartPulse },
-  { id: "clothing", label: "محل ملابس", icon: Shirt },
-  { id: "salon", label: "صالون", icon: Scissors },
-  { id: "general", label: "خدمة عامة", icon: Store },
+  { id: "real-estate", label: "Real Estate", icon: Building2 },
+  { id: "restaurant", label: "Restaurant", icon: ChefHat },
+  { id: "clinic", label: "Clinic", icon: HeartPulse },
+  { id: "clothing", label: "Clothing Store", icon: Shirt },
+  { id: "salon", label: "Salon", icon: Scissors },
+  { id: "general", label: "General Service", icon: Store },
 ];
 
 interface DemoHeroProps {
@@ -40,14 +40,15 @@ export default function DemoHero({ selected, onSelect }: DemoHeroProps) {
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-sm font-medium mb-6">
               <Sparkles size={16} />
-              <span>تجربة تفاعلية</span>
+              <span>Interactive demo</span>
             </div>
             <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5">
-              جرّب موظف الواتساب الذكي على نشاطك
+              Try the AI agent on your business
             </h1>
             <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
-              اختر نوع النشاط اللي يناسبك وشوف كيف يردّ موظفك الذكي على عملائك
-              فورًا، يحجز المواعيد، ويؤهّل العملاء المحتملين داخل واتساب.
+              Pick the business type that matches yours and watch the AI agent
+              reply to customers instantly, book appointments, and qualify
+              leads — right inside WhatsApp.
             </p>
           </div>
         </ScrollReveal>

@@ -34,7 +34,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      aria-label={isDark ? "التبديل إلى الوضع الفاتح" : "التبديل إلى الوضع الداكن"}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="relative w-24 h-12 md:w-32 md:h-14 rounded-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 dark:shadow-[0_0_28px_rgba(56,189,248,0.16)] ring-1 ring-slate-300/50 dark:ring-sky-300/30 scale-[0.8]"
       style={{ WebkitTapHighlightColor: "transparent" }}
     >

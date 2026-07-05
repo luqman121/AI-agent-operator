@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import DemoClient from "@/components/demo/DemoClient";
 
 export const metadata: Metadata = {
-  title: "جرّب موظف الواتساب الذكي | HermesAI",
+  title: "Try the AI Agent Demo | HermesAI",
   description:
-    "جرب موظف واتساب ذكي مباشرة على نشاطك التجاري. عقار، مطعم، عيادة، صالون، محل ملابس، أو خدمة عامة.",
+    "Try a live AI agent on your type of business — real estate, restaurant, clinic, salon, clothing store, or general service.",
 };
 
 export default function DemoPage() {

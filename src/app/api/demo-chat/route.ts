@@ -24,13 +24,13 @@ interface DemoChatPayload {
 
 const fallbackReplies: Record<BusinessType, string> = {
   "real-estate":
-    "ممتاز، هل تبحث عن شراء أو استئجار؟ وكم الميزانية التقريبية؟",
-  restaurant: "أكيد، هل تريد حجز طاولة أو طلب منيو؟ وكم عدد الأشخاص؟",
-  clinic: "تمام، هل تريد حجز موعد؟ وما نوع الخدمة المطلوبة؟",
+    "Great — are you looking to buy or rent? And what's your approximate budget?",
+  restaurant: "Sure! Would you like to book a table or see the menu? How many people?",
+  clinic: "Of course — would you like to book an appointment? What service do you need?",
   clothing:
-    "جميل، هل تبحث عن ملابس رجالية أو نسائية؟ وهل عندك مناسبة معينة؟",
-  salon: "أكيد، هل تريد حجز موعد؟ وما الخدمة المطلوبة؟",
-  general: "أكيد، خبرني أكثر عن طلبك وأنا أساعدك خطوة بخطوة.",
+    "Nice — are you looking for men's or women's wear? Any particular occasion?",
+  salon: "Sure — would you like to book an appointment? Which service do you need?",
+  general: "Of course — tell me a bit more about what you need and I'll help you step by step.",
 };
 
 function getFallbackReply(businessType: BusinessType): string {
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as Partial<DemoChatPayload>;
 
-    const { message = "", sessionId = "", language = "ar", messages } = body;
+    const { message = "", sessionId = "", language = "en", messages } = body;
 
     const businessType = isValidBusinessType(body.businessType)
       ? body.businessType

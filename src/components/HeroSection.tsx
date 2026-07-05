@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import { ArrowLeft, Brain, FileSpreadsheet, Mail, MessageCircle, Send, Zap } from "lucide-react";
+import { ArrowRight, Brain, FileSpreadsheet, Mail, MessageCircle, Send, Zap } from "lucide-react";
 import Link from "next/link";
 import FloatingIcon from "./FloatingIcon";
 import ThemeToggle from "./ThemeToggle";
@@ -27,22 +27,22 @@ export default function HeroSection() {
         ))}
         <div className="relative z-20 text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-sm font-medium mb-6 animate-fade-in">
-            <Zap size={16} /><span>متاح الآن لمشاريع منطقة الخليج</span>
+            <Zap size={16} /><span>Now onboarding businesses across the Gulf</span>
           </div>
           <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5 animate-fade-in-up">
-            كل ساعة ما ترد فيها على العميل، تخسر صفقة.
+            Every hour of manual work is a customer you keep waiting.
           </h1>
           <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            نبني لك موظفًا ذكيًا يشتغل على واتساب يرد على عملائك فورًا، يحجز المواعيد، ويؤهّل العملاء المحتملين، طوال اليوم وطوال الأسبوع. أنت تركّز على شغلك، وهو يتولى الباقي.
+            We build custom AI agents and automation workflows that reply to your customers instantly, qualify leads, book appointments, and handle repetitive work — day and night, all week. You focus on the business; your AI system handles the rest.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up">
-            <WhatsAppButton text="احصل على موظفك الذكي الآن" variant="primary" size="md" className="w-full sm:w-auto" />
-            <WhatsAppLinkButton text="تواصل عبر واتساب" size="md" className="w-full sm:w-auto" />
+            <WhatsAppButton text="Automate My Business" variant="primary" size="md" className="w-full sm:w-auto" />
+            <WhatsAppLinkButton text="Chat on WhatsApp" size="md" className="w-full sm:w-auto" />
             <Link href="/demo" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-semibold px-6 py-3 rounded-full border-2 border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 transition-all duration-200 group">
-              شوفه وهو يشتغل مجانًا <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
+              See It Working — Free <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">يخدم مشاريع في الإمارات وعُمان والسعودية</span> · رد في أقل من ٣ ثوانٍ</p>
+          <p className="mt-6 text-sm text-slate-500 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">Serving businesses in the UAE, Oman & Saudi Arabia</span> · Replies in under 3 seconds</p>
           <div className="flex justify-center mt-6"><ThemeToggle /></div>
         </div>
       </div>

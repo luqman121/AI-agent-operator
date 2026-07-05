@@ -27,7 +27,7 @@ export default function DemoClient() {
       {!selectedBusiness && (
         <section className="pb-16 px-4 text-center">
           <p className="text-slate-500 dark:text-slate-400">
-            اختر نوع النشاط أعلاه لتبدأ تجربة المحادثة
+            Choose a business type above to start the chat demo
           </p>
         </section>
       )}

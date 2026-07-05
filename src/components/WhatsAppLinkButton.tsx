@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function WhatsAppLinkButton({
-  text = "تواصل عبر واتساب",
+  text = "Chat on WhatsApp",
   href = "https://wa.link/0xrd3x",
   size = "lg",
   className = "",
@@ -20,7 +20,7 @@ export default function WhatsAppLinkButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="تواصل معنا عبر واتساب"
+      aria-label="Chat with us on WhatsApp"
       className={`inline-flex items-center justify-center gap-2 font-semibold rounded-full bg-[#25D366] text-white hover:bg-[#1ebe5d] shadow-lg hover:shadow-xl transition-all duration-200 animate-whatsapp-pulse ${sizes[size]} ${className}`}
     >
       <svg

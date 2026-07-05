@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import {
-  ArrowRight,
+  ArrowLeft,
   Camera,
   CheckCheck,
   MoreVertical,
@@ -33,33 +33,33 @@ interface WebhookHistoryMessage {
 }
 
 const businessNames: Record<BusinessType, string> = {
-  "real-estate": "عقارات الخليج",
-  restaurant: "مطعم الذواق",
-  clinic: "عيادة الصحة",
-  clothing: "بوتيك الأناقة",
-  salon: "صالون الجمال",
-  general: "نشاطك التجاري",
+  "real-estate": "Gulf Properties",
+  restaurant: "Taste Restaurant",
+  clinic: "Health Clinic",
+  clothing: "Elegance Boutique",
+  salon: "Beauty Salon",
+  general: "Your Business",
 };
 
 const businessInitials: Record<BusinessType, string> = {
-  "real-estate": "ع",
-  restaurant: "م",
-  clinic: "ص",
-  clothing: "أ",
-  salon: "ج",
-  general: "ن",
+  "real-estate": "G",
+  restaurant: "T",
+  clinic: "H",
+  clothing: "E",
+  salon: "B",
+  general: "Y",
 };
 
 const greetings: Record<BusinessType, string> = {
   "real-estate":
-    "مرحبًا! أنا مساعدك الذكي للعقارات. كيف أقدر أساعدك اليوم؟",
-  restaurant: "أهلاً وسهلاً! أنا مساعد الحجوزات. تبي تحجز طاولة أو طلب منيو؟",
+    "Hi! I'm your AI real-estate assistant. How can I help you today?",
+  restaurant: "Welcome! I'm the booking assistant. Would you like to reserve a table or see the menu?",
   clinic:
-    "مرحبًا بك في عيادة الصحة. أنا مساعد الحجوزات. وش الخدمة اللي تحتاجها؟",
-  clothing: "أهلاً! أنا مساعدك في بوتيك الأناقة. تدور ملابس رجالية أو نسائية؟",
-  salon: "مرحبًا! أنا مساعدة صالون الجمال. تبي تحجزين موعد اليوم؟",
+    "Welcome to Health Clinic. I'm the booking assistant. What service do you need?",
+  clothing: "Hi! I'm your assistant at Elegance Boutique. Are you looking for men's or women's wear?",
+  salon: "Hi! I'm the Beauty Salon assistant. Would you like to book an appointment today?",
   general:
-    "أهلاً! أنا موظفك الذكي على واتساب. كيف أقدر أساعدك في نشاطك؟",
+    "Hi! I'm your AI agent on WhatsApp. How can I help your business?",
 };
 
 function generateId() {
@@ -70,7 +70,7 @@ function generateId() {
 }
 
 function formatTime(date = new Date()) {
-  return date.toLocaleTimeString("ar-SA", {
+  return date.toLocaleTimeString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
@@ -137,7 +137,7 @@ export default function ChatSimulator({ businessType }: ChatSimulatorProps) {
       businessType,
       message: text,
       sessionId,
-      language: "ar",
+      language: "en",
       messages: outgoingMessages,
     };
 
@@ -206,7 +206,7 @@ export default function ChatSimulator({ businessType }: ChatSimulatorProps) {
             {/* WhatsApp header */}
             <div className="relative z-20 flex items-center gap-2 bg-[#25D366] px-3 pb-2 pt-10 text-white shadow-sm">
               <button className="rounded-full p-1 hover:bg-white/10 transition-colors">
-                <ArrowRight size={22} />
+                <ArrowLeft size={22} />
               </button>
               <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-[#128C7E] ring-2 ring-white/30">
                 <div className="flex h-full w-full items-center justify-center text-lg font-bold">
@@ -218,7 +218,7 @@ export default function ChatSimulator({ businessType }: ChatSimulatorProps) {
                   {businessName}
                 </h3>
                 <p className="text-[12px] text-white/90">
-                  {isTyping ? "يكتب..." : "متصل الآن"}
+                  {isTyping ? "typing…" : "online"}
                 </p>
               </div>
               <div className="flex items-center gap-1">
@@ -310,9 +310,9 @@ export default function ChatSimulator({ businessType }: ChatSimulatorProps) {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="اكتب رسالة..."
-                  className="w-full rounded-full bg-white px-4 py-2 text-right text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#25D366]/50"
-                  dir="rtl"
+                  placeholder="Type a message…"
+                  className="w-full rounded-full bg-white px-4 py-2 text-left text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#25D366]/50"
+                  dir="ltr"
                 />
               </div>
               <button
