@@ -6,8 +6,8 @@ import ScrollReveal from "./ScrollReveal";
 
 const faqs = [
   ["Will it sound robotic to my customers?", "No. We train your AI agent specifically on your business: your tone, your products, your language. Most customers can't tell they're talking to AI. And when a complex question comes up, the conversation is handed to your team seamlessly."],
-  ["How long does setup take?", "Most businesses are live within 5 to 7 working days. We handle everything: setup, training, testing, and integrations. No technical knowledge needed."],
-  ["Does it work with my existing WhatsApp Business account?", "Yes. We integrate directly with the WhatsApp Business API. Your number stays the same and your brand stays the same. You simply gain an assistant that works around the clock."],
+  ["How long does setup take?", "Most businesses are live within 3 to 5 business days, depending on how many channels (WhatsApp, Instagram, and website chat) you want connected."],
+  ["Does it work with my existing WhatsApp Business account?", "Yes. We connect directly to your existing WhatsApp Business number. No need to switch numbers or lose your chat history."],
   ["What happens if a customer asks something it doesn't know?", "It handles it gracefully. It tells the customer a team member will follow up, and notifies you right away. No awkward moments, no lost customers."],
   ["Can it book into my actual calendar?", "Yes. We connect it to Google Calendar, Calendly, or your existing booking system. Appointments are confirmed in real time."],
   ["Do I need to be technical to manage this?", "Not at all. We manage everything for you. Want to update a product, change a price, or add a new FAQ? Just tell us and we'll take care of it."],

@@ -1,7 +1,6 @@
 "use client";
 
-import { ArrowRight, Brain, FileSpreadsheet, Mail, MessageCircle, Send, Zap } from "lucide-react";
-import Link from "next/link";
+import { Brain, FileSpreadsheet, Mail, MessageCircle, Send, Zap } from "lucide-react";
 import FloatingIcon from "./FloatingIcon";
 import ThemeToggle from "./ThemeToggle";
 import WhatsAppButton from "./WhatsAppButton";
@@ -30,17 +29,14 @@ export default function HeroSection() {
             <Zap size={16} /><span>Now onboarding businesses worldwide</span>
           </div>
           <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5 animate-fade-in-up">
-            Every hour of manual work is a customer you keep waiting.
+            Stop losing customers to slow replies. Let AI answer first.
           </h1>
           <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            We build custom AI agents and automation workflows that reply to your customers instantly, qualify leads, book appointments, and handle repetitive work, day and night, all week. You focus on your business while your AI system handles the rest.
+            Your AI agent replies in seconds, qualifies the lead, and books the call, 24/7, even while you sleep.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up">
-            <WhatsAppButton text="Automate My Business" variant="primary" size="md" className="w-full sm:w-auto" />
+            <WhatsAppButton text="Book Your Free Demo" variant="primary" size="md" className="w-full sm:w-auto" />
             <WhatsAppLinkButton text="Chat on WhatsApp" size="md" className="w-full sm:w-auto" />
-            <Link href="/demo" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-semibold px-6 py-3 rounded-full border-2 border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 transition-all duration-200 group">
-              See It Working for Free <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">Serving businesses worldwide</span> · Replies in under 3 seconds</p>
           <div className="flex justify-center mt-6"><ThemeToggle /></div>

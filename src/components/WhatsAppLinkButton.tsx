@@ -9,7 +9,7 @@ interface Props {
 
 export default function WhatsAppLinkButton({
   text = "Chat on WhatsApp",
-  href = "https://wa.link/0xrd3x",
+  href = `https://wa.link/0xrd3x?text=${encodeURIComponent("Hi, I'd like to see a demo of the AI automation")}`,
   size = "lg",
   className = "",
 }: Props) {
