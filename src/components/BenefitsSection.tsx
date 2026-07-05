@@ -4,10 +4,10 @@ import { CalendarCheck, Clock3, Star, Target, Timer, Zap } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const benefits = [
-  { icon: Zap, metric: "< 3 sec", title: "Instant replies, every time", text: "No customer waits. Every message gets a professional response within seconds — building trust from the very first touch." },
-  { icon: Clock3, metric: "24/7", title: "Never lose a lead again", text: "Nights, weekends, public holidays — your AI system is always on." },
+  { icon: Zap, metric: "< 3 sec", title: "Instant replies, every time", text: "No customer waits. Every message gets a professional response within seconds, building trust from the very first touch." },
+  { icon: Clock3, metric: "24/7", title: "Never lose a lead again", text: "Nights, weekends, public holidays. Your AI system is always on." },
   { icon: CalendarCheck, metric: "+40%", title: "More bookings", text: "Appointments go straight into your calendar. Customers confirm instantly. No-shows drop. Revenue grows." },
-  { icon: Target, metric: "3×", title: "Better-qualified leads", text: "Every lead is qualified before it reaches you — you only talk to people who are ready to buy." },
+  { icon: Target, metric: "3×", title: "Better-qualified leads", text: "Every lead is qualified before it reaches you, so you only talk to people who are ready to buy." },
   { icon: Timer, metric: "15+ hrs", title: "Saved every week", text: "Free your team from repetitive questions so they can focus on selling and growing the business." },
   { icon: Star, metric: "5-star", title: "A first-class customer experience", text: "Fast, professional, always available. Your customers feel looked after from the first message." },
 ];

@@ -3,10 +3,10 @@
 import {
   Building2,
   ChefHat,
-  HeartPulse,
   Scissors,
   Shirt,
   Sparkles,
+  Stethoscope,
   Store,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -21,7 +21,7 @@ export interface BusinessOption {
 const businesses: BusinessOption[] = [
   { id: "real-estate", label: "Real Estate", icon: Building2 },
   { id: "restaurant", label: "Restaurant", icon: ChefHat },
-  { id: "clinic", label: "Clinic", icon: HeartPulse },
+  { id: "clinic", label: "Clinic", icon: Stethoscope },
   { id: "clothing", label: "Clothing Store", icon: Shirt },
   { id: "salon", label: "Salon", icon: Scissors },
   { id: "general", label: "General Service", icon: Store },
@@ -48,7 +48,7 @@ export default function DemoHero({ selected, onSelect }: DemoHeroProps) {
             <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
               Pick the business type that matches yours and watch the AI agent
               reply to customers instantly, book appointments, and qualify
-              leads — right inside WhatsApp.
+              leads, right inside WhatsApp.
             </p>
           </div>
         </ScrollReveal>

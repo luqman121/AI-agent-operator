@@ -33,7 +33,7 @@ interface WebhookHistoryMessage {
 }
 
 const businessNames: Record<BusinessType, string> = {
-  "real-estate": "Gulf Properties",
+  "real-estate": "Prime Properties",
   restaurant: "Taste Restaurant",
   clinic: "Health Clinic",
   clothing: "Elegance Boutique",
@@ -42,7 +42,7 @@ const businessNames: Record<BusinessType, string> = {
 };
 
 const businessInitials: Record<BusinessType, string> = {
-  "real-estate": "G",
+  "real-estate": "P",
   restaurant: "T",
   clinic: "H",
   clothing: "E",

@@ -1,14 +1,14 @@
 "use client";
 
-import { Building2, Car, HeartPulse, Scissors, ShoppingBag, Utensils } from "lucide-react";
+import { Building2, Car, Scissors, ShoppingBag, Stethoscope, Utensils } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const industries = [
-  { icon: Building2, title: "Real Estate", text: "Capture and qualify property leads 24/7 — before your competitors even notice them.", points: ["Qualifies buyers by budget and location", "Books property viewings automatically", "Follows up with cold leads"] },
-  { icon: HeartPulse, title: "Medical Clinics", text: "Cut missed appointments and take the pressure off your front desk.", points: ["Books and confirms appointments", "Sends appointment reminders", "Manages follow-up scheduling"] },
-  { icon: Scissors, title: "Salons & Beauty Centers", text: "Keep your calendar filling up automatically — even mid-session.", points: ["Books services and specialists", "Answers pricing questions", "Handles rebooking"] },
+  { icon: Building2, title: "Real Estate", text: "Capture and qualify property leads 24/7, before your competitors even notice them.", points: ["Qualifies buyers by budget and location", "Books property viewings automatically", "Follows up with cold leads"] },
+  { icon: Stethoscope, title: "Medical Clinics", text: "Cut missed appointments and take the pressure off your front desk.", points: ["Books and confirms appointments", "Sends appointment reminders", "Manages follow-up scheduling"] },
+  { icon: Scissors, title: "Salons & Beauty Centers", text: "Keep your calendar filling up automatically, even mid-session.", points: ["Books services and specialists", "Answers pricing questions", "Handles rebooking"] },
   { icon: Car, title: "Car Dealerships", text: "Turn more enquiries into test drives.", points: ["Qualifies buyers by model and budget", "Books test drives", "Follows up with interested buyers"] },
-  { icon: Utensils, title: "Restaurants", text: "Never miss a table booking or catering enquiry — even at peak service.", points: ["Takes table reservations 24/7", "Shares menu and pricing", "Confirms bookings automatically"] },
+  { icon: Utensils, title: "Restaurants", text: "Never miss a table booking or catering enquiry, even at peak service.", points: ["Takes table reservations 24/7", "Shares menu and pricing", "Confirms bookings automatically"] },
   { icon: ShoppingBag, title: "E-commerce & Retail", text: "Support hundreds of customers at once without adding a single employee.", points: ["Handles order tracking", "Recommends products", "Manages returns and complaints"] },
 ];
 

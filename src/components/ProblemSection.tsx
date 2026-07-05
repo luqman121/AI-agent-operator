@@ -9,7 +9,7 @@ const problems = [
   { icon: AlarmClock, title: "Slow replies kill your sales", description: "78% of customers buy from the first business that responds. Every minute of delay lowers your chances.", color: "text-red-500", bgColor: "bg-red-50" },
   { icon: Users, title: "Your team is busy answering, not selling", description: "Your best people spend their day handling simple enquiries instead of focusing on closing deals.", color: "text-violet-500", bgColor: "bg-violet-50" },
   { icon: CalendarX, title: "Appointments get lost between messages", description: "Manual booking over WhatsApp means forgotten appointments, double bookings, and lost revenue.", color: "text-sky-500", bgColor: "bg-sky-50" },
-  { icon: Megaphone, title: "You pay for ads, then lose leads in the replies", description: "You spend on ads to bring in leads — then lose them because nobody was available to respond in time.", color: "text-orange-500", bgColor: "bg-orange-50" },
+  { icon: Megaphone, title: "You pay for ads, then lose leads in the replies", description: "You spend on ads to bring in leads, then lose them because nobody was available to respond in time.", color: "text-orange-500", bgColor: "bg-orange-50" },
 ];
 
 export default function ProblemSection() {

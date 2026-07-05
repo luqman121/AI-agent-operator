@@ -6,7 +6,7 @@ import DemoClient from "@/components/demo/DemoClient";
 export const metadata: Metadata = {
   title: "Try the AI Agent Demo | HermesAI",
   description:
-    "Try a live AI agent on your type of business — real estate, restaurant, clinic, salon, clothing store, or general service.",
+    "Try a live AI agent on your type of business: real estate, restaurant, clinic, salon, clothing store, or general service.",
 };
 
 export default function DemoPage() {

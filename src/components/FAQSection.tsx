@@ -5,10 +5,10 @@ import { Minus, Plus } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const faqs = [
-  ["Will it sound robotic to my customers?", "No. We train your AI agent specifically on your business — your tone, your products, your language. Most customers can't tell they're talking to AI. And when a complex question comes up, the conversation is handed to your team seamlessly."],
-  ["How long does setup take?", "Most businesses are live within 5–7 working days. We handle everything — setup, training, testing, and integrations. No technical knowledge needed."],
-  ["Does it work with my existing WhatsApp Business account?", "Yes. We integrate directly with the WhatsApp Business API. Your number stays the same, your brand stays the same — you just gain an assistant that works around the clock."],
-  ["What happens if a customer asks something it doesn't know?", "It handles it gracefully — it tells the customer a team member will follow up, and notifies you right away. No awkward moments, no lost customers."],
+  ["Will it sound robotic to my customers?", "No. We train your AI agent specifically on your business: your tone, your products, your language. Most customers can't tell they're talking to AI. And when a complex question comes up, the conversation is handed to your team seamlessly."],
+  ["How long does setup take?", "Most businesses are live within 5 to 7 working days. We handle everything: setup, training, testing, and integrations. No technical knowledge needed."],
+  ["Does it work with my existing WhatsApp Business account?", "Yes. We integrate directly with the WhatsApp Business API. Your number stays the same and your brand stays the same. You simply gain an assistant that works around the clock."],
+  ["What happens if a customer asks something it doesn't know?", "It handles it gracefully. It tells the customer a team member will follow up, and notifies you right away. No awkward moments, no lost customers."],
   ["Can it book into my actual calendar?", "Yes. We connect it to Google Calendar, Calendly, or your existing booking system. Appointments are confirmed in real time."],
   ["Do I need to be technical to manage this?", "Not at all. We manage everything for you. Want to update a product, change a price, or add a new FAQ? Just tell us and we'll take care of it."],
   ["How much does it cost?", "Plans start from $299/month depending on your business size and conversation volume. Most clients recover the cost within the first two months from deals they would otherwise have lost. Book a free demo and we'll prepare a custom quote within 24 hours."],

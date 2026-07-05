@@ -4,9 +4,9 @@ import ScrollReveal from "./ScrollReveal";
 import TestimonialCard from "./TestimonialCard";
 
 const testimonials = [
-  { name: "Khalid Al-Anzi", role: "Manager", company: "Al Noor Real Estate, Dubai", quote: "We used to lose leads every single night. Now our AI agent captures every after-hours enquiry and hands the sales team qualified leads each morning. Bookings went up 40% in the first month.", rating: 5 },
-  { name: "Dr. Sarah Al-Marzouqi", role: "Clinic Director", company: "Al Shifa Medical Center, Abu Dhabi", quote: "Our receptionist spent 3 hours a day answering the same questions on WhatsApp. Now she focuses on patients. The AI handles bookings, FAQs, and follow-ups.", rating: 5 },
-  { name: "Rana Al-Habsi", role: "Owner", company: "Lumière Beauty, Muscat", quote: "After the first week, I had 12 qualified leads waiting on Monday morning — all of them came in over the weekend while the salon was closed. It paid for itself in the first 10 days.", rating: 5 },
+  { name: "Khalid Al-Anzi", role: "Manager", company: "Al Noor Real Estate", quote: "We used to lose leads every single night. Now our AI agent captures every after-hours enquiry and hands the sales team qualified leads each morning. Bookings went up 40% in the first month.", rating: 5 },
+  { name: "Dr. Sarah Al-Marzouqi", role: "Clinic Director", company: "Al Shifa Medical Center", quote: "Our receptionist spent 3 hours a day answering the same questions on WhatsApp. Now she focuses on patients. The AI handles bookings, FAQs, and follow-ups.", rating: 5 },
+  { name: "Rana Al-Habsi", role: "Owner", company: "Lumière Beauty", quote: "After the first week, I had 12 qualified leads waiting on Monday morning. All of them came in over the weekend while the salon was closed. It paid for itself in the first 10 days.", rating: 5 },
 ];
 
 export default function TestimonialsSection() {
