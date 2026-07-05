@@ -35,7 +35,7 @@ export default function HeroSection() {
             Your AI agent replies in seconds, qualifies the lead, and books the call, 24/7, even while you sleep.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up">
-            <WhatsAppButton text="Book Your Free Demo" variant="primary" size="md" className="w-full sm:w-auto" />
+            <WhatsAppButton text="Book a Free Consultation" variant="primary" size="md" className="w-full sm:w-auto" />
             <WhatsAppLinkButton text="Chat on WhatsApp" size="md" className="w-full sm:w-auto" />
           </div>
           <p className="mt-6 text-sm text-slate-500 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">Serving businesses worldwide</span> · Replies in under 3 seconds</p>
