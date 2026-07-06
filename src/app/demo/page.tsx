@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import DemoClient from "@/components/demo/DemoClient";
 
 export const metadata: Metadata = {
-  title: "Try the AI Agent Demo | Agentive",
+  title: "Try the AI Agent Demo | Opsivoai",
   description:
     "Try a live AI agent on your type of business: real estate, restaurant, clinic, salon, clothing store, or general service.",
 };
