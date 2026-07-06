@@ -112,7 +112,7 @@ export default function WhatsAppDemoSection() {
 
           <ScrollReveal delay={0.15}>
             <div className="flex justify-center">
-              <div className="relative mx-auto w-full max-w-[250px] md:max-w-[270px] animate-float-slow">
+              <div className="relative mx-auto w-full max-w-[290px] md:max-w-[300px] animate-float-slow">
                 {/* Soft floating shadow */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[75%] h-6 rounded-full bg-slate-900/20 dark:bg-black/40 blur-xl animate-pulse" />
 
@@ -150,7 +150,7 @@ export default function WhatsAppDemoSection() {
                     {/* Chat area */}
                     <div
                       ref={chatAreaRef}
-                      className="relative h-[340px] md:h-[380px] overflow-y-auto overflow-x-hidden bg-[#EFEAE2] px-2.5 py-3"
+                      className="relative h-[440px] md:h-[460px] overflow-y-auto overflow-x-hidden bg-[#EFEAE2] px-2.5 py-3"
                     >
                       {/* WhatsApp wallpaper doodle pattern */}
                       <div
