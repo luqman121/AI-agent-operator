@@ -305,10 +305,10 @@ const faqs = [
 
 function SectionHeader({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-brand-500">{eyebrow}</p>
-      <h2 className="text-3xl font-black tracking-tight text-slate-950 dark:text-white md:text-5xl">{title}</h2>
-      {copy ? <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">{copy}</p> : null}
+    <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+      <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-brand-500 md:text-sm md:tracking-[0.28em]">{eyebrow}</p>
+      <h2 className="text-2xl font-black leading-tight tracking-tight text-slate-950 dark:text-white sm:text-3xl md:text-5xl">{title}</h2>
+      {copy ? <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300 md:mt-5 md:text-lg md:leading-8">{copy}</p> : null}
     </div>
   );
 }
@@ -317,12 +317,12 @@ function PrimaryButton({ children, href = calendlyHref }: { children: React.Reac
   return (
     <a
       href={href}
-      className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-black text-white shadow-xl shadow-orange-500/25 transition hover:-translate-y-0.5 hover:bg-orange-600 md:px-7 md:py-4 md:text-base"
+      className="inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-orange-500 px-4 py-2.5 text-xs font-black leading-none text-white shadow-xl shadow-orange-500/25 transition hover:-translate-y-0.5 hover:bg-orange-600 sm:px-5 sm:text-sm md:px-7 md:py-4 md:text-base"
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
     >
-      <MessageCircle size={18} />
-      {children}
+      <MessageCircle className="shrink-0" size={16} />
+      <span className="truncate">{children}</span>
     </a>
   );
 }
@@ -331,12 +331,12 @@ function SecondaryButton({ children, href = whatsappHref }: { children: React.Re
   return (
     <a
       href={href}
-      className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-black text-white shadow-xl shadow-emerald-500/25 transition hover:-translate-y-0.5 hover:bg-emerald-600 md:px-7 md:py-4 md:text-base"
+      className="inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-emerald-500 px-4 py-2.5 text-xs font-black leading-none text-white shadow-xl shadow-emerald-500/25 transition hover:-translate-y-0.5 hover:bg-emerald-600 sm:px-5 sm:text-sm md:px-7 md:py-4 md:text-base"
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
     >
-      <MessageCircle size={18} />
-      {children}
+      <MessageCircle className="shrink-0" size={16} />
+      <span className="truncate">{children}</span>
     </a>
   );
 }
@@ -394,15 +394,15 @@ function ChatPreview() {
 export default function Home() {
   return (
     <main id="home" className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-      <nav className="fixed left-4 right-4 top-4 z-50 mx-auto max-w-5xl rounded-full border border-white/80 bg-white/90 px-4 py-3 shadow-2xl shadow-slate-900/10 backdrop-blur-xl dark:border-slate-700/70 dark:bg-slate-900/90">
-        <div className="flex items-center justify-between gap-4">
+      <nav className="fixed left-3 right-3 top-3 z-50 mx-auto max-w-5xl rounded-full border border-white/80 bg-white/90 px-3 py-2 shadow-2xl shadow-slate-900/10 backdrop-blur-xl dark:border-slate-700/70 dark:bg-slate-900/90 sm:left-4 sm:right-4 sm:top-4 sm:px-4 sm:py-3">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           <Link href="#home" className="flex items-center gap-2" aria-label="Opsivo home">
-            <Image src="/logo-light.webp" alt="Opsivo logo" width={835} height={160} priority className="h-8 w-auto dark:hidden" />
-            <Image src="/logo-dark.webp" alt="Opsivo logo" width={780} height={160} priority className="hidden h-8 w-auto dark:block" />
+            <Image src="/logo-light.webp" alt="Opsivo logo" width={835} height={160} priority className="h-6 w-auto dark:hidden sm:h-8" />
+            <Image src="/logo-dark.webp" alt="Opsivo logo" width={780} height={160} priority className="hidden h-6 w-auto dark:block sm:h-8" />
           </Link>
           <div className="hidden items-center gap-6 text-sm font-bold text-slate-500 md:flex">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="transition hover:text-brand-600" target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}>
+              <a key={link.label} href={link.href} className="whitespace-nowrap transition hover:text-brand-600" target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}>
                 {link.label}
               </a>
             ))}
@@ -411,36 +411,36 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="px-5 pb-28 pt-28 md:pt-32">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 rounded-[2.5rem] border border-white bg-white p-6 shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 md:grid-cols-2 md:p-10">
+      <section className="px-3 pb-16 pt-24 sm:px-5 sm:pb-24 sm:pt-28 md:pt-32">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-[1.75rem] border border-white bg-white p-4 shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 sm:rounded-[2.25rem] sm:p-6 md:grid-cols-2 md:gap-10 md:p-10">
           <div className="order-2 md:order-1">
             <ChatPreview />
           </div>
           <div className="order-1 text-center md:order-2 md:text-left">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm font-black text-brand-600 dark:bg-sky-500/10">
-              <Send size={16} /> Your personal assistant through Telegram
+            <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full bg-sky-50 px-3 py-2 text-xs font-black leading-tight text-brand-600 dark:bg-sky-500/10 sm:px-4 sm:text-sm md:mb-5">
+              <Send className="shrink-0" size={15} /> <span>Your personal assistant through Telegram</span>
             </div>
-            <h1 className="text-5xl font-black leading-[1.02] tracking-tight text-slate-950 dark:text-white md:text-7xl">
+            <h1 className="text-[2.55rem] font-black leading-[1.06] tracking-tight text-slate-950 dark:text-white sm:text-5xl md:text-7xl">
               A smart personal assistant that keeps up with your day.
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg sm:leading-8 md:mt-6">
               Talk to it through Telegram and let it help you organize tasks, remember appointments, write messages, summarize information, and plan your day.
             </p>
-            <p className="mt-5 text-base font-bold leading-8 text-slate-700 dark:text-slate-200">
+            <p className="mt-4 text-sm font-bold leading-7 text-slate-700 dark:text-slate-200 sm:text-base sm:leading-8 md:mt-5">
               A private AI agent configured around your needs and the way you work.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
+            <div className="mt-7 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center md:items-start">
               <PrimaryButton>Get Your Agent Now</PrimaryButton>
               <SecondaryButton>Talk to us on WhatsApp</SecondaryButton>
             </div>
-            <div className="mt-7 flex flex-wrap justify-center gap-4 text-sm font-bold text-slate-500 md:justify-start">
+            <div className="mt-6 flex flex-wrap justify-center gap-3 text-center text-xs font-bold leading-6 text-slate-500 sm:text-sm md:justify-start">
               {[
                 "Works in English",
                 "No technical experience needed",
                 "Book a 30-minute setup call",
               ].map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
-                  <Check size={16} className="text-emerald-500" /> {item}
+                  <Check size={15} className="shrink-0 text-emerald-500" /> <span>{item}</span>
                 </span>
               ))}
             </div>
@@ -451,14 +451,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-24">
-        <div className="mx-auto max-w-5xl rounded-[2rem] bg-white p-6 shadow-xl shadow-slate-900/5 dark:bg-slate-900 md:p-10">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
+        <div className="mx-auto max-w-5xl rounded-[1.75rem] bg-white p-5 shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[2rem] sm:p-6 md:p-10">
           <SectionHeader
             eyebrow="Because your day has too many details"
             title="Your day is busy. You should not have to remember everything alone."
             copy="Between work, family appointments, messages, postponed tasks, and scattered information, it is normal to forget details or feel that your day is not organized."
           />
-          <p className="mx-auto mb-8 max-w-3xl text-center text-lg leading-8 text-slate-600 dark:text-slate-300">
+          <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg md:leading-8">
             Opsivo helps collect those details in one place, arrange them clearly, and follow up with you step by step.
           </p>
           <div className="grid gap-4 md:grid-cols-3">
@@ -467,25 +467,25 @@ export default function Home() {
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-brand-600 dark:bg-sky-500/10">
                   <Icon size={23} />
                 </div>
-                <h3 className="text-xl font-black text-slate-950 dark:text-white">{title}</h3>
-                <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">{copy}</p>
+                <h3 className="text-lg font-black text-slate-950 dark:text-white sm:text-xl">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base">{copy}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" className="px-5 py-24">
+      <section id="how-it-works" className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader eyebrow="Prepared for you" title="Not just AI that answers you — an agent that follows up with you." />
           <div className="grid gap-5 md:grid-cols-2">
             {comparison.map(({ title, points, Icon, tone }) => (
-              <article key={title} className={`rounded-[2rem] border p-7 shadow-xl shadow-slate-900/5 ${tone === "brand" ? "border-brand-200 bg-sky-50 dark:border-brand-500/30 dark:bg-sky-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
-                <div className="mb-5 flex items-center gap-3">
+              <article key={title} className={`rounded-[1.75rem] border p-5 shadow-xl shadow-slate-900/5 sm:rounded-[2rem] sm:p-7 ${tone === "brand" ? "border-brand-200 bg-sky-50 dark:border-brand-500/30 dark:bg-sky-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
+                <div className="mb-5 flex items-start gap-3 sm:items-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 text-white">
                     <Icon size={23} />
                   </div>
-                  <h3 className="text-2xl font-black text-slate-950 dark:text-white">{title}</h3>
+                  <h3 className="text-xl font-black leading-tight text-slate-950 dark:text-white sm:text-2xl">{title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {points.map((point) => (
@@ -501,34 +501,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-24">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader eyebrow="With you from morning to night" title="How can it help throughout your day?" />
           <div className="grid gap-4 md:grid-cols-4">
             {dayFlow.map(({ title, copy, Icon }) => (
-              <article key={title} className="rounded-[1.75rem] bg-white p-6 shadow-xl shadow-slate-900/5 dark:bg-slate-900">
+              <article key={title} className="rounded-[1.5rem] bg-white p-5 shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[1.75rem] sm:p-6">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-brand-600 dark:bg-sky-500/10">
                   <Icon size={22} />
                 </div>
-                <h3 className="text-xl font-black text-slate-950 dark:text-white">{title}</h3>
-                <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">{copy}</p>
+                <h3 className="text-lg font-black text-slate-950 dark:text-white sm:text-xl">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base">{copy}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="use-cases" className="px-5 py-24">
+      <section id="use-cases" className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader eyebrow="Fits your day" title="One assistant, configured around your needs." />
           <div className="grid gap-5 md:grid-cols-3">
             {useCases.map(({ title, points, Icon }) => (
-              <article key={title} className="rounded-[2rem] bg-white p-7 shadow-xl shadow-slate-900/5 dark:bg-slate-900">
-                <div className="mb-5 flex items-center gap-3">
+              <article key={title} className="rounded-[1.75rem] bg-white p-5 shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[2rem] sm:p-7">
+                <div className="mb-5 flex items-start gap-3 sm:items-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 text-white">
                     <Icon size={23} />
                   </div>
-                  <h3 className="text-xl font-black text-slate-950 dark:text-white">{title}</h3>
+                  <h3 className="text-lg font-black text-slate-950 dark:text-white sm:text-xl">{title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {points.map((point) => (
@@ -544,12 +544,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-24">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader eyebrow="Simple steps, no technical complexity" title="How do you get your Opsivo agent?" />
           <div className="grid gap-4 md:grid-cols-5">
             {setupSteps.map(({ title, copy, Icon }, index) => (
-              <article key={title} className="relative rounded-[1.75rem] bg-white p-6 shadow-xl shadow-slate-900/5 dark:bg-slate-900">
+              <article key={title} className="relative rounded-[1.5rem] bg-white p-5 shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[1.75rem] sm:p-6">
                 <span className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-sky-100 text-sm font-black text-brand-700 dark:bg-sky-500/10">{index + 1}</span>
                 <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 text-white">
                   <Icon size={22} />
@@ -562,7 +562,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="plans" className="px-5 py-24">
+      <section id="plans" className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Choose the service level that fits"
@@ -571,11 +571,11 @@ export default function Home() {
           />
           <div className="grid gap-5 lg:grid-cols-4">
             {plans.map(({ title, copy, cta, points, highlighted }) => (
-              <article key={title} className={`flex rounded-[2rem] border p-6 shadow-xl shadow-slate-900/5 ${highlighted ? "border-brand-300 bg-brand-500 text-white" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
+              <article key={title} className={`flex rounded-[1.75rem] border p-5 shadow-xl shadow-slate-900/5 sm:rounded-[2rem] sm:p-6 ${highlighted ? "border-brand-300 bg-brand-500 text-white" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
                 <div className="flex w-full flex-col">
                   <Sparkles className={highlighted ? "text-white" : "text-brand-500"} size={24} />
-                  <h3 className={`mt-5 text-2xl font-black ${highlighted ? "text-white" : "text-slate-950 dark:text-white"}`}>{title}</h3>
-                  <p className={`mt-3 leading-7 ${highlighted ? "text-white/85" : "text-slate-600 dark:text-slate-300"}`}>{copy}</p>
+                  <h3 className={`mt-5 text-xl font-black leading-tight sm:text-2xl ${highlighted ? "text-white" : "text-slate-950 dark:text-white"}`}>{title}</h3>
+                  <p className={`mt-3 text-sm leading-7 sm:text-base ${highlighted ? "text-white/85" : "text-slate-600 dark:text-slate-300"}`}>{copy}</p>
                   <ul className="mt-5 flex-1 space-y-3">
                     {points.map((point) => (
                       <li key={point} className={`flex items-start gap-2 text-sm ${highlighted ? "text-white/90" : "text-slate-600 dark:text-slate-300"}`}>
@@ -594,8 +594,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-24">
-        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-900/5 dark:bg-slate-900 md:grid-cols-[1.35fr_1fr]">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
+        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[1.75rem] bg-white shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[2rem] md:grid-cols-[1.35fr_1fr]">
           <div className="space-y-4 p-6 md:p-10">
             {safetyPoints.map((point) => (
               <div key={point} className="flex items-center gap-3 rounded-2xl bg-slate-50 p-4 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
@@ -604,22 +604,22 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex min-h-[320px] flex-col items-center justify-center bg-slate-950 p-10 text-center text-white">
+          <div className="flex min-h-[260px] flex-col items-center justify-center bg-slate-950 p-6 text-center text-white sm:min-h-[320px] sm:p-10">
             <ShieldCheck className="mb-6 text-brand-300" size={42} />
-            <h2 className="text-4xl font-black">You are always in control.</h2>
-            <p className="mt-5 leading-8 text-slate-300">
+            <h2 className="text-3xl font-black leading-tight sm:text-4xl">You are always in control.</h2>
+            <p className="mt-4 text-sm leading-7 text-slate-300 sm:mt-5 sm:text-base sm:leading-8">
               We apply suitable procedures to protect your information and define permissions based on the service setup you approve.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-24">
-        <div className="mx-auto grid max-w-6xl gap-5 rounded-[2rem] bg-white p-6 shadow-xl shadow-slate-900/5 dark:bg-slate-900 md:grid-cols-[0.9fr_1.1fr] md:p-8">
-          <div className="flex min-h-[310px] flex-col items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-brand-500 to-sky-700 p-8 text-center text-white">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
+        <div className="mx-auto grid max-w-6xl gap-5 rounded-[1.75rem] bg-white p-5 shadow-xl shadow-slate-900/5 dark:bg-slate-900 sm:rounded-[2rem] sm:p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
+          <div className="flex min-h-[260px] flex-col items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-brand-500 to-sky-700 p-5 text-center text-white sm:min-h-[310px] sm:p-8">
             <PlayCircle size={58} />
-            <h2 className="mt-6 text-3xl font-black">Telegram conversation preview</h2>
-            <p className="mt-4 leading-8 text-white/85">
+            <h2 className="mt-5 text-2xl font-black leading-tight sm:mt-6 sm:text-3xl">Telegram conversation preview</h2>
+            <p className="mt-4 text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
               Book a 30-minute meeting and see how an Opsivo agent can be configured around your real daily workflow.
             </p>
             <PrimaryButton>Get Your Agent Now</PrimaryButton>
@@ -637,36 +637,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="px-5 py-24">
+      <section id="faq" className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
         <div className="mx-auto max-w-4xl">
           <SectionHeader eyebrow="Frequently asked questions" title="Everything you need to know before getting started." />
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <details key={faq.question} className="group rounded-2xl bg-white p-5 shadow-lg shadow-slate-900/5 open:ring-1 open:ring-brand-100 dark:bg-slate-900 dark:open:ring-brand-500/20" open={index === 0}>
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-black text-slate-950 dark:text-white">
+              <details key={faq.question} className="group rounded-2xl bg-white p-4 shadow-lg shadow-slate-900/5 open:ring-1 open:ring-brand-100 dark:bg-slate-900 dark:open:ring-brand-500/20 sm:p-5" open={index === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-black leading-tight text-slate-950 dark:text-white sm:text-lg">
                   {faq.question}
                   <ChevronDown className="shrink-0 text-brand-500 transition group-open:rotate-180" size={20} />
                 </summary>
-                <p className="mt-4 leading-8 text-slate-600 dark:text-slate-300">{faq.answer}</p>
+                <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base sm:leading-8">{faq.answer}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-24">
-        <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-gradient-to-br from-brand-500 to-sky-700 p-8 text-center text-white shadow-2xl shadow-brand-500/25 md:p-14">
-          <h2 className="text-4xl font-black tracking-tight md:text-6xl">Reduce task pressure and start your day with more clarity.</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/85">
+      <section className="px-4 py-14 sm:px-5 sm:py-20 md:py-24">
+        <div className="mx-auto max-w-6xl rounded-[1.75rem] bg-gradient-to-br from-brand-500 to-sky-700 p-5 text-center text-white shadow-2xl shadow-brand-500/25 sm:rounded-[2.5rem] sm:p-8 md:p-14">
+          <h2 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-6xl">Reduce task pressure and start your day with more clarity.</h2>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-white/85 sm:mt-6 sm:text-lg sm:leading-8">
             See how a private AI agent can help with work, appointments, messages, and daily tasks.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href={calendlyHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-black text-brand-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50">
+          <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <a href={calendlyHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-white px-5 py-3 text-sm font-black leading-none text-brand-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50 sm:px-7 sm:py-4 sm:text-base">
               <MessageCircle size={18} /> Get Your Agent Now
             </a>
             <SecondaryButton>Talk to us on WhatsApp</SecondaryButton>
           </div>
-          <p className="mt-6 text-sm font-semibold text-white/75">30-minute meeting • Clear setup plan • Built for practical daily use</p>
+          <p className="mt-5 text-xs font-semibold leading-6 text-white/75 sm:mt-6 sm:text-sm">30-minute meeting • Clear setup plan • Built for practical daily use</p>
         </div>
       </section>
 
