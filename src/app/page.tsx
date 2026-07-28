@@ -27,8 +27,9 @@ import {
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
+const calendlyHref = "https://calendly.com/luqmanalhinai700/30-min-meeting";
 const whatsappHref = `https://wa.link/0xrd3x?text=${encodeURIComponent(
-  "Hi, I want to try the Opsivo personal AI agent.",
+  "Hi, I want to get my Opsivo personal AI agent.",
 )}`;
 
 const navLinks = [
@@ -173,20 +174,20 @@ const setupSteps = [
 
 const plans = [
   {
-    title: "Free trial",
-    copy: "A guided preview of how the agent works.",
-    cta: "Try it for free",
+    title: "Start now",
+    copy: "Book a quick consultation and get your agent setup started.",
+    cta: "Get Your Agent Now",
     highlighted: false,
     points: [
       "Examples for planning, writing, and organization.",
-      "No payment card required.",
-      "Your private tools are not connected during the trial.",
+      "Clear next steps after the meeting.",
+      "We review your needs before connecting any private tools.",
     ],
   },
   {
     title: "Personal agent",
     copy: "Your own agent through Telegram.",
-    cta: "Request your personal agent",
+    cta: "Get Your Agent Now",
     highlighted: true,
     points: [
       "Configured around your needs.",
@@ -199,7 +200,7 @@ const plans = [
   {
     title: "Advanced agent",
     copy: "Everything in the personal agent, with more integrations.",
-    cta: "Discuss your needs",
+    cta: "Get Your Agent Now",
     highlighted: false,
     points: [
       "Calendar, email, and file connections.",
@@ -211,7 +212,7 @@ const plans = [
   {
     title: "Business agent",
     copy: "A custom setup for your company.",
-    cta: "Request a custom quote",
+    cta: "Get Your Agent Now",
     highlighted: false,
     points: [
       "Private business knowledge base.",
@@ -291,14 +292,14 @@ const faqs = [
       "Only the information required for the agreed service setup should be used, and permissions can be limited. Sensitive details are handled according to the configuration approved with you.",
   },
   {
-    question: "Is the free trial a complete private agent?",
+    question: "Will my agent be fully private?",
     answer:
-      "No. The free trial is a guided demonstration of how the agent works. Private tools and integrations are not connected during the trial.",
+      "Your agent is configured around your needs and approved permissions. Private tools and integrations are only connected after the setup is agreed with you.",
   },
   {
     question: "How do I start?",
     answer:
-      "Start with the free trial or contact us on WhatsApp. We will understand your needs and recommend the right setup.",
+      "Click Get Your Agent Now and book a 30-minute meeting. We will understand your needs and recommend the right setup.",
   },
 ];
 
@@ -312,7 +313,7 @@ function SectionHeader({ eyebrow, title, copy }: { eyebrow: string; title: strin
   );
 }
 
-function PrimaryButton({ children, href = whatsappHref }: { children: React.ReactNode; href?: string }) {
+function PrimaryButton({ children, href = calendlyHref }: { children: React.ReactNode; href?: string }) {
   return (
     <a
       href={href}
@@ -406,7 +407,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <PrimaryButton>Try it for free</PrimaryButton>
+          <PrimaryButton>Get Your Agent Now</PrimaryButton>
         </div>
       </nav>
 
@@ -429,14 +430,14 @@ export default function Home() {
               A private AI agent configured around your needs and the way you work.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
-              <PrimaryButton>Try your Opsivo agent for free</PrimaryButton>
+              <PrimaryButton>Get Your Agent Now</PrimaryButton>
               <SecondaryButton>Talk to us on WhatsApp</SecondaryButton>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-4 text-sm font-bold text-slate-500 md:justify-start">
               {[
                 "Works in English",
                 "No technical experience needed",
-                "Trial without a payment card",
+                "Book a 30-minute setup call",
               ].map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
                   <Check size={16} className="text-emerald-500" /> {item}
@@ -583,7 +584,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition ${highlighted ? "bg-white text-brand-700 hover:bg-sky-50" : "bg-slate-950 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-950"}`}>
+                  <a href={calendlyHref} target="_blank" rel="noopener noreferrer" className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition ${highlighted ? "bg-white text-brand-700 hover:bg-sky-50" : "bg-slate-950 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-950"}`}>
                     {cta} <ArrowRight size={16} />
                   </a>
                 </div>
@@ -619,9 +620,9 @@ export default function Home() {
             <PlayCircle size={58} />
             <h2 className="mt-6 text-3xl font-black">Telegram conversation preview</h2>
             <p className="mt-4 leading-8 text-white/85">
-              A real video is not available yet. You can try the interactive simulation now and see how the agent responds.
+              Book a 30-minute meeting and see how an Opsivo agent can be configured around your real daily workflow.
             </p>
-            <PrimaryButton href="/demo">Try your Opsivo agent for free</PrimaryButton>
+            <PrimaryButton>Get Your Agent Now</PrimaryButton>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {demoSteps.map(({ title, copy, Icon }, index) => (
@@ -660,12 +661,12 @@ export default function Home() {
             See how a private AI agent can help with work, appointments, messages, and daily tasks.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href="/demo" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-black text-brand-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50">
-              <MessageCircle size={18} /> Try your Opsivo agent for free
+            <a href={calendlyHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-black text-brand-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50">
+              <MessageCircle size={18} /> Get Your Agent Now
             </a>
             <SecondaryButton>Talk to us on WhatsApp</SecondaryButton>
           </div>
-          <p className="mt-6 text-sm font-semibold text-white/75">Guided demo • No payment card • Built for practical daily use</p>
+          <p className="mt-6 text-sm font-semibold text-white/75">30-minute meeting • Clear setup plan • Built for practical daily use</p>
         </div>
       </section>
 
