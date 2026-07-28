@@ -421,7 +421,7 @@ export default function Home() {
               <Send className="shrink-0" size={15} /> <span>Your personal assistant through Telegram</span>
             </div>
             <h1 className="text-[2.55rem] font-black leading-[1.06] tracking-tight text-slate-950 dark:text-white sm:text-5xl md:text-7xl">
-              A smart personal assistant that keeps up with your day.
+              Your Smart AI Agent, Ready for Your Day.
             </h1>
             <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg sm:leading-8 md:mt-6">
               Talk to it through Telegram and let it help you organize tasks, remember appointments, write messages, summarize information, and plan your day.
